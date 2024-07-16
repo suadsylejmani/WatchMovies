@@ -2,15 +2,18 @@ export const getMovies = ({page}) => {
     const api = `https://api.themoviedb.org/3/discover/movie?api_key=3e52e2f5350ae60de5e2fc58e818d2a0${(page == undefined) ? '' : `&page=${page}`}`
     
     return fetch(api)
+    //We take a response from the api than we convert that data to JSON or we can say that we parse it to JSON.
     .then(response => response.json())
-    .then(data => data)
+    .then(data => data) // Here we take the results that we take from the API, we can check through  console.log to see if the API is called correctly.
 }
 
 
 export const showMovies = (movies, limit) => {
     
+    //Slice(take the number we want) movies to a number we decide. So in homepage 0 to 4(or more) it will  display that number of movies.
     const latest_movies = movies.slice(0, limit)
-
+    
+    //Style the div
     let html = `<div class="row">`
 
     for(let movie of latest_movies){
@@ -34,7 +37,7 @@ export const showMovies = (movies, limit) => {
         </div>`
     }
 
-    html += `</div>`
+    html += `</div>` //Close the div
 
     return html;
 }

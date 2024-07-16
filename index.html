@@ -24,6 +24,9 @@
         
         navbar(document.querySelector("#navbar"));
         getMovies({}).then(data => document.querySelector('#movies').innerHTML = showMovies(data.results, 4))
+         //First we call getMovies to activate the get method to get the movies from the api, then we take that data and manipulate with the data using DOM
+         //So then we put those movies to that div with id movies and than we take showMovies and display their data and results, so the limit of the movies that will be displayed in Home is 4
+         
         
     </script>
 </body>
