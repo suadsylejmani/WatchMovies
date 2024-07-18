@@ -41,3 +41,44 @@ export const showMovies = (movies, limit) => {
 
     return html;
 }
+
+
+// function composeSlider(movies, limit){
+//     const latest_movies = movies.slice(0, limit)
+//     const img = (movie.backdrop_path == null) ? './assets/img/noImage.png' : `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
+
+//         return `<div id="carouselExample" class="carousel slide">
+//         <div class="carousel-inner">
+//           <div class="carousel-item active ${movie.id}">
+//             <img src="${img}" class="d-block w-100" alt="${movie.original_title}">
+//           </div>
+//       </div>`
+// }
+
+// function composeSlides(movies){
+//     let html = ''
+
+//     for(let movie of movies){
+//         html += composeSlider(movie)
+//     }
+
+//     return html
+// }
+
+// export function movie_slider(div, movies){
+//     div.innerHTML = `
+//     <div id="carouselExample" class="carousel slide">
+//     <div class="carousel-inner">
+//         ${composeSlides(movies)}
+//     </div>
+//     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+//       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+//       <span class="visually-hidden">Previous</span>
+//     </button>
+//     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+//       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+//       <span class="visually-hidden">Next</span>
+//     </button>
+//   </div>`
+//}
+
